@@ -1,0 +1,477 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family:'Lato', serif;
+  font-weight: Medium;
+  box-sizing: border-box;
+}
+body{
+    background-color: #000000;
+
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+
+#wait{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+
+
+
+}
+
+.wait_anim{
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: gray;
+  float: left;
+  margin-left: 20px;
+
+}
+
+
+/*finestra iniziale con foto che scorrono - da aggiungere lo slidewshow*/
+.fin_1{
+  width: 100%;
+  height: 100%;
+
+  background-color: white;
+  transition: 1s linear;
+
+}
+
+.fin_1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 2s;
+  filter: contrast(100%) brightness(70%);
+}
+
+/*finestra di transizione*/
+/*.fin_2{
+  box-sizing: content-box;
+  position: absolute;
+  transition: 0.5s linear;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  border-width: 2vh;
+  border-style: solid;
+  border-color: #000000   #999999 #cccccc #333333 ;
+  background-image: url(camilla.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: scroll;
+}*/
+
+/*eliminazione finestra per pagine index
+.fin_3{
+  position: relative;
+  height: auto;
+  padding-bottom: 1vw;
+  padding-top: 1vw;
+}
+/*finestra iniziale bianca*/
+.fin_4{
+  margin: -47vh 0 0 -47vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-sizing: content-box;
+  width: 94vw;
+  height: 94vh;
+
+  border-width: 2vh;
+
+
+}
+/*finestra finale bianca*/
+
+.fin_5{
+
+  position: absolute;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  margin: -50vh 0 0 -50vw;
+  background-color: white;
+  transition: 0.5s linear;
+  border-width: 2vh;
+  overflow: visible;
+}
+
+
+
+
+/*titolo e go-inside*/
+#titolo{
+
+  box-sizing: content-box;
+  overflow: hidden;
+  display: inline-block;
+
+  padding-right: 2.5vw;
+
+
+}
+.titolo_1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-size: 8vw;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+
+
+
+
+
+}
+
+.titolo_2{
+    position: relative;
+  font-size: 6vw;
+  color:  Black;
+  padding-left: 2.5vw;
+  padding-top: 1vw;
+
+
+
+}
+#go-inside{
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  color: white;
+  font-size: 3vw;
+
+}
+
+
+.topnav{
+  overflow: hidden;
+  transition: 3s;
+
+}
+.topnav a {
+    transition:0s;
+    font-size: 1.7vw;
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    margin: 14px 1.5vw 14px 3vw;
+    padding: 0 3px 0 3px;
+    text-decoration: none;
+    box-sizing: content-box;
+    border-left: 2px solid transparent;
+      border-right: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      transform: translate(-5px, 0);
+
+}
+
+.topnav a:hover{
+  border-bottom: 2px solid black;
+
+    transition: 0.5s;
+    box-sizing: content-box;
+
+}
+
+
+
+
+
+
+.row_general{
+  display: grid;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 0 2% 0 13%;
+  -ms-grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
+  box-sizing: content-box;
+  grid-gap: 10px;
+  animation: transition 1s linear;
+  width: 85%;
+}
+
+.row_general img{
+  width: 21vw;
+  height: 14vw;
+  object-fit: cover;
+  transition: all .2s ease-in-out;
+}
+
+
+
+.row_general img:hover{
+
+    transform:scale(1.01);
+   box-shadow: 0.1vw 0.1vw 5px 1px #3c3c3c;
+   transition:0.2s;
+   box-sizing:content-box;
+
+}
+
+.row_text{
+  display: grid;
+  padding-top: 2%;
+  margin: 0 2% 0 3vw;
+  grid: auto/ auto auto auto auto;
+  grid-gap: 10px;
+  animation: transition 1s linear;
+  width: 40%;
+}
+
+
+
+.menu_tendina{
+  list-style: none;
+  float: right;
+}
+.menu_tendina ul{
+  list-style: none;
+    display:none;
+}
+
+.menu_tendina li{
+    float:left;
+    display: block;
+}
+
+
+.menu_tendina a{
+  display: block;
+  text-decoration: none;
+}
+
+.menu_tendina a:hover{
+
+  text-decoration: none;
+}
+
+.menu_tendina li ul{
+    display: none
+}
+
+.menu_tendina li:hover ul{
+    display: block;
+    position: absolute;
+    z-index:1;
+    width:150px;
+    padding: 0;
+    margin: -7vw 0 0 -1px;
+
+}
+
+
+#contact a
+{
+    display: block;
+    padding: 5px;
+    color: #000;
+    text-decoration: none;
+}
+
+#contact a:hover
+{
+    background-color: #000033;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+/*#menu_sx{
+
+  /*display: inline;
+  /* padding-top: 2%;
+  animation: transition 1s linear;
+
+  float:  left;
+  width: 7%;
+  padding-top: 2%;
+  padding-left:3vw;
+  position: absolute;
+  padding: 2% 0 0 2%;
+  border: 1px solid black;
+  height: 200px;
+  width: fit-content;
+  display: inline;
+  z-index: 120;
+
+}*/
+
+
+
+
+.anno{
+  position: sticky;
+  /* box-sizing:  content-box; */
+  top: 15%;
+  /* padding: 6% 0 0 0; */
+  margin: 2% 0 0 3vw;
+
+  text-align:left;
+  font-size:120%;
+  float:  left;
+  /* display: inline-block; */
+  width: fit-content;
+  /* height: 600000px; */
+}
+
+
+@keyframes transition {
+
+  from {opacity: 0.1;}
+  to {opacity: 1;}
+}
+
+#row_about {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+
+
+/*griglia di contenimento foto*/
+#row_photos {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+
+#row_drawings {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+#row_projects {
+  /* Prevent vertical gaps */
+    line-height: 0;
+    transition: 1s;
+
+    column-count:         5;
+    column-gap:           0px;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* SLIDESHOW */
+.slide_tot{
+  width: 100%;
+  height: 100%;
+  background-image:url(immagini/sfondo_slideshow.png);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+.slideshow{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: fit-content;
+    height: fit-content;
+
+    object-fit: fill;
+}
+
+
+
+.slideshow img{
+
+  width: 91vw;
+  display: inline;
+  height: 96vh;
+  object-fit: contain;
+  margin-top: 2vh;
+  background-color: black;
+  transition: 1s;
+
+}
+
+.slide{
+  /* float:  right; */
+  position:  absolute;
+  top: 50%;
+  width: 4vw;
+  height: 4vw;
+  font-size: 150%;
+  background-color: transparent;
+  border: none;
+  transform: translate(0, -50%);
+  color: white;
+}
+
+.sx{
+  left: 0;
+}
+
+.dx{
+  right: 0;
+}
+
+.bar_slide{
+  width: 4vw;
+  display: inline;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+
+}
+
+.exit_slide{
+  position:  absolute;
+  top: 3%;
+  width: 4vw;
+  height: 4vw;
+  font-size: 150%;
+  background-color: transparent;
+  border: none;
+  transform: translate(0, -50%);
+  color: white;
+}
