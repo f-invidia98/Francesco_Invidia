@@ -18,7 +18,7 @@ function loading(){
 
 /* CLICK INIZIALE */
 
-$("#go-inside").on("click", function(){
+$("#go-inside, #fin").on("click", function(){
 
 
   $("#titolo").removeClass("titolo_1").addClass("titolo_2");
@@ -213,7 +213,7 @@ function showDivs(n) {
 
 
 $('.mail').on('click',function(){
-       window.location.href = "mailto:finvidia@gmail.com"; 
+       window.location.href = "mailto:finvidia@gmail.com";
     });
 
 

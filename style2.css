@@ -11,6 +11,8 @@ body{
 
 }
 
+a { color: inherit; } 
+
 .center{
   position: absolute;
   top: 50%;
@@ -140,11 +142,19 @@ body{
   font-size: 8vw;
   width: fit-content;
   transform: translate(-50%, -50%);
+  transition: linear 0.2s;
+  -webkit-transition: linear 0.2s;
 
 
 
 
 
+}
+
+.titolo_1:hover{
+  transform: translate(-50%, -50%) scale(1.02);
+  transition: linear 0.2s;
+  -webkit-transition: linear 0.2s;
 }
 
 .titolo_2{
