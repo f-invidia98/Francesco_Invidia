@@ -11,7 +11,7 @@ body{
 
 }
 
-a { color: inherit; } 
+a { color: inherit; }
 
 .center{
   position: absolute;
@@ -159,7 +159,7 @@ a { color: inherit; }
 
 .titolo_2{
     position: relative;
-  font-size: 6vw;
+  font-size: 5.5vw;
   color:  Black;
   padding-left: 2.5vw;
   padding-top: 1vw;
