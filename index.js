@@ -8,7 +8,7 @@ var h=$("#"+n);
 /*--- LOADING ----*/
 
 
-$(".fin_1 > img").ready(setTimeout(loading, 900))
+$(".fin_1 > img").ready(loading)
 
 function loading(){
   $("#wait").css('display', 'none');
