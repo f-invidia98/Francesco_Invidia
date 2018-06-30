@@ -499,3 +499,5 @@ a { color: inherit; }
   transition: 1s;
 
 }
+
+#img_slide img:hover { cursor: -webkit-zoom-in;  cursor: zoom-in; }
