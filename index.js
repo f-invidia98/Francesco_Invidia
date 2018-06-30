@@ -6,15 +6,28 @@ var h=$("#"+n);
 
 
 /*--- LOADING ----*/
+var i;
+var j = $(".fin_1 > img");
+var k = $("#Ph_n1 > .row_general > img");
+var y = $("#Ph_n2 > .row_general > img");
+$(j[0]).attr("src", $(y[8]).attr('src'))
+$(j[1]).attr("src", $(y[9]).attr('src'))
+$(j[2]).attr("src", $(y[0]).attr('src'))
+$(j[3]).attr("src", $(y[2]).attr('src'))
+$(j[4]).attr("src", $(y[5]).attr('src'))
 
-$(".fin_1 > img").ready(loading)
+
+
+
 
 
 function loading(){
+  $(".fin_4").css('background-color', 'white');
   $("#wait").css('display', 'none');
 
-}
 
+}
+$(".fin_1 > img").on("load", loading);
 
 /* CLICK INIZIALE */
 
@@ -91,21 +104,12 @@ $(h).css('border-left', '2px solid black').css('border-right', '2px solid black'
 
 /* --- SLIDESHOW 1---*/
 
-var i;
-var j = $(".fin_1 > img");
-var k = $("#Ph_n1 > .row_general > img");
-var y = $("#Ph_n2 > .row_general > img");
-$(j[0]).attr("src", $(y[8]).attr('src'))
-$(j[1]).attr("src", $(y[9]).attr('src'))
-$(j[2]).attr("src", $(y[0]).attr('src'))
-$(j[3]).attr("src", $(y[2]).attr('src'))
-$(j[4]).attr("src", $(y[5]).attr('src'))
 
 if(j[slide_1-1]){
   row=$("#row_photos");
 }
 
-$(".fin_1 > img").ready(loading, 3000)
+
 
 
 var slide_1 = 1;
