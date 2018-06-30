@@ -7,12 +7,12 @@ var h=$("#"+n);
 
 /*--- LOADING ----*/
 
-
 $(".fin_1 > img").ready(loading)
+
 
 function loading(){
   $("#wait").css('display', 'none');
-  $(".fin_4").css('background-color', 'white');
+  
 }
 
 
@@ -105,6 +105,7 @@ if(j[slide_1-1]){
   row=$("#row_photos");
 }
 
+$(".fin_1 > img").ready(loading, 3000)
 
 
 var slide_1 = 1;
