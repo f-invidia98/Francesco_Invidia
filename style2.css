@@ -432,16 +432,16 @@ a { color: inherit; }
 
 
 
-.slideshow img{
+.slideshow .img-zoom-container img{
 
-  width: 91vw;
+  max-width: 91vw;
   display: inline;
-  height: 96vh;
+  max-height: 96vh;
   object-fit: contain;
   margin-top: 2vh;
   background-color: black;
   transition: 1s;
-
+  margin: auto;
 }
 
 .slide{
@@ -484,4 +484,18 @@ a { color: inherit; }
   border: none;
   transform: translate(0, -50%);
   color: white;
+}
+
+
+
+.img-zoom-container{
+  position: relative;
+  width: 91vw;
+
+  height: 96vh;
+  object-fit: contain;
+  margin-top: 2vh;
+  background-color: black;
+  transition: 1s;
+
 }

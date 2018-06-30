@@ -1,6 +1,6 @@
 var stato=0;
 var w;
-var a=$("#row_photos");
+var row=$("#row_photos");
 var n="photos";
 var h=$("#"+n);
 
@@ -48,9 +48,9 @@ function fin_3(){
 function mostra_generale(){
   $(".topnav").css('display', 'block');
 
-  $(a).css('visibility', 'visible');
-  $(a).css('opacity', '1');
-  $(a).css('display', 'block');
+  $(row).css('visibility', 'visible');
+  $(row).css('opacity', '1');
+  $(row).css('display', 'block');
   $(h).css('border-left', '2px solid black').css('border-right', '2px solid black')
 
 }
@@ -72,18 +72,18 @@ var m;
 
 
 $(".menu").on("click", function(){
-m=a;
+m=row;
 
 $(m).css('visibility', 'hidden');
 $(m).css('opacity', '0.1');
 $(m).css('display', 'none');
 $(h).css('border-left', '2px solid transparent').css('border-right', '2px solid transparent');
 n=this.id;
-a=$("#row_" + n);
+row=$("#row_" + n);
 h=$("#"+n);
-$(a).css('visibility', 'visible');
-$(a).css('opacity', '1');
-$(a).css('display', 'block');
+$(row).css('visibility', 'visible');
+$(row).css('opacity', '1');
+$(row).css('display', 'block');
 $(h).css('border-left', '2px solid black').css('border-right', '2px solid black');
 
 })
@@ -102,7 +102,7 @@ $(j[3]).attr("src", $(y[2]).attr('src'))
 $(j[4]).attr("src", $(y[5]).attr('src'))
 
 if(j[slide_1-1]){
-  a=$("#row_photos");
+  row=$("#row_photos");
 }
 
 
@@ -138,21 +138,35 @@ else {
 
 /* --- SLIDESHOW 2---*/
 
-var s = $("> div > .row_general > img" , a);
-var c;
-var x = $(".slideshow > img");
+var img_sorgente = $("> div > .row_general > img" , row);
+var img_click;
+var xy = $(".slideshow > .img-zoom-container > img");
 var slideIndex;
-var d;
+var img_src;
 
 
 $(".row_general > img").on("click", function(){
   $("#slideshow").css('display', 'block');
   var $this = this;
-  s = $("> div > .row_general > img" , a);
-  c=s.index($this);
-  slideIndex = c;
-  d = $(s[slideIndex]).attr('src');
+  img_sorgente = $("> div > .row_general > img" , row);
+  img_click=img_sorgente.index($this);
+  slideIndex = img_click;
+  img_src = $(img_sorgente[slideIndex]).attr('src');
+
   showDivs(slideIndex);
+
+
+
+
+
+
+
+
+
+
+
+
+
 })
 
 $(".exit_slide").on("click", function(){
@@ -165,15 +179,20 @@ $(".exit_slide").on("click", function(){
 
 
 
-$(".slideshow > img").on("click", function(){
-  plusDivs(+1);
-})
+
+
+
+
+
+
+
 
 
 
 $(document).keydown(function(e){
     if (e.keyCode == 37) {
        plusDivs(-1);
+
        return false;
     }
     if (e.keyCode == 39) {
@@ -182,8 +201,11 @@ $(document).keydown(function(e){
     }
 
     if (e.keyCode == 27) {
+
        $("#slideshow").css('display', 'none')
+       $(".zoomImg").remove();
        return false;
+
     }
 });
 
@@ -192,18 +214,31 @@ $(document).keydown(function(e){
 
 
 function plusDivs(n) {
-  c += n;
-  if (c < 0) {c = s.length-1}
-  if (c > s.length-1) {c = 0}
-  slideIndex = c;
-  d = $(s[slideIndex]).attr('src');
+  img_click += n;
+  if (img_click < 0) {img_click = img_sorgente.length-1}
+  if (img_click > img_sorgente.length-1) {img_click = 0}
+  slideIndex = img_click;
+  img_src = $(img_sorgente[slideIndex]).attr('src');
+
+
+  $(".zoomImg").remove();
   showDivs(slideIndex);
+
+
 
 }
 
 function showDivs(n) {
-  x[0].style.display = "block";
-  $(x[0]).attr('src', d);
+  xy[0].style.display = "block";
+
+  $(xy[0]).attr('src', img_src);
+  $(document).ready(function(){
+
+    $('#img_slide').zoom({ on:'click', magnify:"1.5" });
+
+  });
+
+
 
 
 
