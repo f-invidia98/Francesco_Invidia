@@ -12,7 +12,7 @@ $(".fin_1 > img").ready(loading)
 
 function loading(){
   $("#wait").css('display', 'none');
-  
+
 }
 
 
@@ -172,11 +172,9 @@ $(".row_general > img").on("click", function(){
 
 $(".exit_slide").on("click", function(){
   $("#slideshow").css('display', 'none')
+  $(".zoomImg").remove();
 })
 
-$(".exit_slide").on("click", function(){
-  $("#slideshow").css('display', 'none')
-})
 
 
 
