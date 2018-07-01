@@ -152,7 +152,7 @@ if(w==120){
   $(".slideshow_1").css('display', 'none');
 }
 else {
-  setTimeout(showDiv, 750);
+  setTimeout(showDiv, 1000);
 }
 
 
