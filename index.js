@@ -6,6 +6,28 @@ var h=$("#"+n);
 
 
 /*--- LOADING ----*/
+
+var wait=$("#wait>div>.wait_anim")
+
+function wait2() {
+  $(wait[1]).addClass("wait-animazione")
+
+}
+function wait3() {
+  $(wait[2]).addClass("wait-animazione")
+
+}
+
+$(wait[0]).addClass("wait-animazione")
+setTimeout(wait2,700)
+setTimeout(wait3,1400)
+
+
+
+
+
+
+
 var i;
 var j = $(".fin_1 > img");
 var k = $("#Ph_n1 > .row_general > img");

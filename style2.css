@@ -37,10 +37,22 @@ a { color: inherit; }
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  background-color: black;
+  background-color: transparent;
   float: left;
   margin-left: 20px;
 
+}
+
+@keyframes waiting {
+from{background-color: transparent}
+25%{background-color: transparent}
+50%{background-color: black}
+75%{background-color: black}
+to{background-color: transparent}
+}
+
+.wait-animazione{
+  animation: waiting 2.5s infinite linear;
 }
 
 
